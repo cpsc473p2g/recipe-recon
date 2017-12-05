@@ -7,6 +7,27 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+
+    firebase: {
+      apiKey: "AIzaSyAroJjildU7raJc6ew2XLaW2aelNCYw6Q0",
+      authDomain: "reciperecon-725cb.firebaseapp.com",
+      databaseURL: "https://reciperecon-725cb.firebaseio.com",
+      projectId: "reciperecon-725cb",
+      storageBucket: "reciperecon-725cb.appspot.com",
+      messagingSenderId: "978520979257"
+    },
+
+    // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
+    torii: {
+      sessionServiceName: 'session'
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -21,6 +42,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      yummlyCredentials: {
+        _app_id: '0fd0fbe1',
+        _app_key: '92cf22bd5cc8e3ed8ae241e43d52832c',
+      },
     }
   };
 
